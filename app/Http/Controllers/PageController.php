@@ -9,4 +9,7 @@ class PageController extends Controller
     public function getIndex(){
       return view('page.trangchu');
     }
+    public function getTemplates(){
+      return view('page.templates');
+    }
 }

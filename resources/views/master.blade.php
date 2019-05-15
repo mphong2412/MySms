@@ -29,10 +29,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index" >
 
-        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="source/img/logo.png" alt="">
-      </a>
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
@@ -92,7 +89,7 @@
         templates
       </div>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="templates">
           <i class="fas fa-fw fa-folder"></i>
           <span>Managerment</span>
         </a>
@@ -180,6 +177,9 @@
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
+          <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index" >
+            <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 15rem;" src="source/img/logo.png" alt="">
+          </a>
 
           <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
