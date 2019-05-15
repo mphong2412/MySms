@@ -12,4 +12,7 @@ class PageController extends Controller
     public function getTemplates(){
       return view('page.templates');
     }
+    public function getAddTemp(){
+      return view('page.addtemp');
+    }
 }

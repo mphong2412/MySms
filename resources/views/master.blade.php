@@ -17,6 +17,8 @@
 
   <!-- Custom styles for this template-->
   <link href="source/css/sb-admin-2.min.css" rel="stylesheet">
+  <!-- Custom styles for this page -->
+  <link href="source/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -266,8 +268,9 @@
 
         </nav>
         <!-- End of Topbar -->
-
+        <div class="rev-slider">
         @yield('content')
+      </div>
 
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
@@ -319,12 +322,15 @@
   <!-- Custom scripts for all pages-->
   <script src="source/js/sb-admin-2.min.js"></script>
 
+
   <!-- Page level plugins -->
   <script src="source/vendor/chart.js/Chart.min.js"></script>
+
 
   <!-- Page level custom scripts -->
   <script src="source/js/demo/chart-area-demo.js"></script>
   <script src="source/js/demo/chart-pie-demo.js"></script>
+
 
 </body>
 

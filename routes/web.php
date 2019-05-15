@@ -16,4 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('index',['as'=>'trang-chu','uses'=>'PageController@getIndex']);
-Route::get('templates',['as'=>'template','uses'=>'PageController@getTemplates']);
+Route::get('templates',['as'=>'templates','uses'=>'PageController@getTemplates']);
+Route::get('addtemp',['as'=>'addtemp','uses'=>'PageController@getAddTemp']);
