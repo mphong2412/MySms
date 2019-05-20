@@ -20,9 +20,6 @@ class PageController extends Controller
     public function getXoa($id)
    {
       $templates = templates::find($id);
-
-      // $tintuc = TinTuc::where('idLoaiTin',$id)->delete();
-
        $templates->delete();
        return redirect('templates')->with('thongbao','Xóa thành công');
    }

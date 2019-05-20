@@ -51,7 +51,9 @@
                 <a href="#" class="btn  btn-circle btn-sm">
                   <i class="fas fa-edit"></i>
                 </a>
-              <td class="center"><i class="fa fa-trash-o fa-fw"></i><a href="templates/xoa/{{$t->id}}">Delete</a></td>
+                <a href="templates/xoa/{{$t->id}}" class="btn btn-danger btn-circle btn-sm">
+                  <i class="fas fa-trash"></i>
+                </a>
             </td>
             </tr>
           </tbody>
@@ -64,7 +66,6 @@
 
 </div>
 <!-- /.container-fluid -->
-
 <script src="source/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="source/js/demo/datatables-demo.js"></script>
 @endsection
