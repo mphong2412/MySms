@@ -32,6 +32,9 @@
           <option value="100">100/page</option>
         </select>
       </label> entries.</div>
+      @if(session('thongbao'))
+      <div class="alert arlert-success">{{session('thongbao')}}</div>
+      @endif
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
@@ -48,9 +51,9 @@
               <td>{{$t->service}}</td>
               <td>{{$t->template}}</td>
               <td>
-                <a href="#" class="btn  btn-circle btn-sm">
+                <button class="btn  btn-circle btn-sm" onclick="window.location.href='edittemp'">
                   <i class="fas fa-edit"></i>
-                </a>
+                </button>
                 <a href="templates/xoa/{{$t->id}}" class="btn btn-danger btn-circle btn-sm">
                   <i class="fas fa-trash"></i>
                 </a>
@@ -59,7 +62,7 @@
           </tbody>
           @endforeach
         </table>
-        <p class="pull-left">Showing {{count($template)}} templates.</p>
+        <p class="pull-left">Total {{count($template)}} templates.</p>
       </div>
     </div>
   </div>

@@ -3,13 +3,13 @@
 <div class="md-6" style="border:solid">
 <form action="" method="POST" >
   <div class="container">
-      <h2>Add New Template</h2>
-      <form action="addtemp" method="POST">
+      <h2>Edit Template</h2>
+      <form action="edittemp/{{$templates->id}}" method="POST">
           <label for="fname">Service: </label>
-          <input type="text" id="Service" name="Service" required><br>
+          <input type="text" id="Service" name="Service" value="{{$edittemp->Service}}" required><br>
 
           <label for="lname">Template: </label>
-          <input type="textarea" id="Template" name="Template" required><br>
+          <input type="textarea" id="Template" name="Template" value="{{$edittemp->Template}}" required><br>
 
           <button class="btn btn-success" type="button" style="margin: 5px">
             <i class="fas fa-plus fa-sm"> Add User</i>
@@ -29,10 +29,9 @@
 <button class="btn btn-success" type="button" style="margin: 10px" onclick="history.back();">
   <i class="fas fa-times fa-sm"> Cancel</i>
 </button>
-<button class="btn btn-success" type="submit" style="margin: 10px">
+<button class="btn btn-success" type="button" style="margin: 10px" onclick="">
   <i class="fas fa-save fa-sm"> Save</i>
 </button>
 </form>
 </div>
-
 @endsection
