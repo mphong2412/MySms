@@ -23,9 +23,24 @@ class GroupController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function getThem()
     {
-        //
+        $groups = contact_groups::all();
+        return view('page/groups/add');
+    }
+    public function postThem()
+    {
+      $this->validate($request,
+       [
+           'txtGroup' => 'required ',
+           'txtDesc' =>'required ',
+       ]);
+
+       $groups = new contact_groups();
+       $groups->name_group = $request->txtGroup;
+       $groups->description = $request->txtDesc;
+       $groups->save();
+       return redirect()->back()->with('thongbao','Bạn đã thêm thành công');
     }
 
     /**

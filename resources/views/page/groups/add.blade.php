@@ -11,42 +11,23 @@
   @if(session('thongbao'))
     {{session('thongbao')}}
   @endif
-<form action="templates/them" method="POST" >
+<form action="templates/them" method="POST" ><center>
 
   <div class="container">
       <h2>Add New Group</h2>
       <!-- <form action="" method="POST"> -->
         <input type="hidden" name="_token" value="{{csrf_token()}}"/>
-          <label for="fname">Service: </label>
-          <input type="text" id="Service" name="txtService" ><br>
+          <label for="fname">Name group: </label>
+          <input type="text" id="Service" name="txtGroup" ><br>
 
-          <label for="lname">Template: </label>
-          <input type="textarea" id="Template" name="txtTemplate" ><br>
-
-          <button class="btn btn-success" type="button" style="margin: 5px">
-            <i class="fas fa-plus fa-sm"> Add User</i>
-          </button> <br>
-
-
+          <label for="lname">Description: </label>
+          <input type="textarea" id="Template" name="txtDesc" ><br>
   </div>
-
-<table class="table table-bordered" id="dataTable" width="100%" >
-  <thead>
-    <tr>
-      <th>Seq</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-</table><br>
-
 <button class="btn btn-success" type="button" style="margin: 10px" onclick="history.back();">
   <i class="fas fa-times fa-sm"> Cancel</i>
 </button>
   <button type="submit" class="btn btn-success fas fa-save fa-sm"  style="margin: 10px"> Save</button>
-
+</center>
 </form>
 </div>
 

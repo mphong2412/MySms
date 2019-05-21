@@ -58,6 +58,9 @@ Route::get('services',['as'=>'service','uses'=>'ServiceController@getList']);
       // Route::post('addtemp','ServiceController@postThem');
   });
 
-  Route::group(['prefix'=>'services'],function(){
+  Route::group(['prefix'=>'groups'],function(){
+    
+    Route::get('add','GroupController@getThem');
+    Route::post('add','GroupController@postThem');
 
   });

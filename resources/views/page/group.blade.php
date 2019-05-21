@@ -16,7 +16,7 @@
               <button class="btn btn-primary" type="button" style="margin-left: 10px">
                 <i class="fas fa-search fa-sm"> Search</i>
               </button>
-              <a href="templates/them"><button class="btn btn-success" type="button" style="margin-left: 10px">
+              <a href="groups/add"><button class="btn btn-success" type="button" style="margin-left: 10px">
                 <i class="fas fa-plus fa-sm"> Add New</i>
               </button></a>
             </div>

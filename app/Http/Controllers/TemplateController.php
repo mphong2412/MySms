@@ -66,6 +66,6 @@ class TemplateController extends Controller
      $templates->service = $request->txtService;
      $templates->template = $request->txtTemplate;
      $templates->save();
-     return redirect()->back()->with('thongbao','Bạn đã thêm thành công');
+     return redirect('templates')->with('thongbao','Bạn đã thêm thành công');
  }
 }
