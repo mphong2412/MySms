@@ -9,19 +9,20 @@
   </div>
   @endif
   @if(session('thongbao'))
-    {{session('thongbao')}}
+  <div class="alert alert-success">
+    {{session('thongbao')}}</div>
   @endif
-<form action="templates/them" method="POST" >
+<form action="templates/sua/{{$templates->id}}" method="POST" >
 
   <div class="container">
       <h2>Edit Template</h2>
       <!-- <form action="" method="POST"> -->
         <input type="hidden" name="_token" value="{{csrf_token()}}"/>
           <label for="fname">Service: </label>
-          <input type="text" id="Service" name="txtService" ><br>
+          <input type="text" id="Service" name="txtService" value="{{$templates->service}}"><br>
 
           <label for="lname">Template: </label>
-          <input type="textarea" id="Template" name="txtTemplate" ><br>
+          <input type="textarea" id="Template" name="txtTemplate" value="{{$templates->template}}"><br>
 
           <button class="btn btn-success" type="button" style="margin: 5px">
             <i class="fas fa-plus fa-sm"> Add User</i>
@@ -42,7 +43,7 @@
   </thead>
 </table><br>
 
-<button class="btn btn-success" type="button" style="margin: 10px" onclick="history.back();">
+<button class="btn btn-success" type="button" style="margin: 10px" onclick="window.location.href='templates'">
   <i class="fas fa-times fa-sm"> Cancel</i>
 </button>
   <button type="submit" class="btn btn-success fas fa-save fa-sm"  style="margin: 10px"> Save</button>

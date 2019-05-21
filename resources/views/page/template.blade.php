@@ -51,7 +51,7 @@
               <td>{{$t->service}}</td>
               <td>{{$t->template}}</td>
               <td>
-                <button class="btn  btn-circle btn-sm" onclick="window.location.href='templates/sua/{id}'">
+                <button class="btn  btn-circle btn-sm" onclick="window.location.href='templates/sua/{{$t->id}}'">
                   <i class="fas fa-edit"></i>
                 </button>
                 <a href="templates/xoa/{{$t->id}}" class="btn btn-danger btn-circle btn-sm">
@@ -63,6 +63,7 @@
           @endforeach
         </table>
         <p class="pull-left">Total {{count($template)}} templates.</p>
+        {{$template->links()}}
       </div>
     </div>
   </div>

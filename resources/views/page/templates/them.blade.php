@@ -42,7 +42,7 @@
   </thead>
 </table><br>
 
-<button class="btn btn-success" type="button" style="margin: 10px" onclick="history.back();">
+<button class="btn btn-success" type="button" style="margin: 10px" onclick="window.location.href='templates'">
   <i class="fas fa-times fa-sm"> Cancel</i>
 </button>
   <button type="submit" class="btn btn-success fas fa-save fa-sm"  style="margin: 10px"> Save</button>

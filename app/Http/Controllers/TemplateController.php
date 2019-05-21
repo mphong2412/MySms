@@ -25,29 +25,23 @@ class TemplateController extends Controller
 
  //
    public function getSua($id){
-       // // $list_services = list_services::all();
-       // $templates = templates::find($id);
-       // return view('page.edittemp' ,['template'=>$templates]);
-       return view('page.templates.sua');
+       //$list_services = list_services::all();
+       $templates = templates::find($id);
+       return view('page/templates/sua',['templates'=>$templates]);
    }
  public function postSua(Request $request ,$id){
-     // $this->validate($request,
-     //     [
-     //         'services' => 'required|min:3',
-     //
-     //     ],[
-     //         'services.required'=>'Bạn chưa nhập tên',
-     //         'services.unique'=>'Tên đã tồn tại',
-     //         'services.min'=>'Tên phải có 3 ký tự'
-     //     ]);
-     //
-     // $templates = templates::find($id);
-     // $templates->id_list_services = $request->list_services;
-     // $templates->service = $request->service;
-     // $templates->template =  $request->template;
-     // $templates->save();
-     //
-     // return redirect('page.edittemp'.$id)->with('thongbao','Sửa thành công');
+     $this->validate($request,
+         [
+           'txtService' => 'required ',
+           'txtTemplate' =>'required ',
+         ]);
+
+     $templates = templates::find($id);
+     $templates->service = $request->txtService;
+     $templates->template =  $request->txtTemplate;
+     $templates->save();
+
+     return redirect('templates/sua/'.$id)->with('thongbao','Sửa thành công');
  }
 
  // thêm template
