@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('index',['as'=>'trang-chu','uses'=>'PageController@getIndex']);
 Route::get('templates',['as'=>'template','uses'=>'PageController@getTemplates']);
+Route::get('compose',['as'=>'compose','uses'=>'PageController@getCompose']);
+
+Route::get('login','UserController@getLoginAdmin');
+Route::post('login','UserController@postLoginAdmin');
+
+Route::get('register','UserController@getRegisterAdmin');
+Route::post('register','UserController@postRegisterAdmin');

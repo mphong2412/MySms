@@ -12,4 +12,8 @@ class PageController extends Controller
     public function getTemplates(){
       return view('page.templates');
     }
+
+    public function getCompose(){
+      return view('page.compose');
+    }
 }
