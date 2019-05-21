@@ -17,18 +17,31 @@ Route::get('/', function () {
 
 Route::get('index',['as'=>'trang-chu','uses'=>'PageController@getIndex']);
 Route::get('templates',['as'=>'templates','uses'=>'PageController@getTemplates']);
-Route::get('addtemp',['as'=>'addtemp','uses'=>'PageController@getAddTemp']);
-Route::post('addtemp',['as'=>'addtemp','uses'=>'PageController@postAddTemp']);
-Route::get('edittemp',['as'=>'edittemp','uses'=>'PageController@getEdit']);
+Route::get('services',['as'=>'service','uses'=>'ServiceController@getList']);
 
 
-Route::group(['prefix'=>'templates'],function(){
-  // xóa template
-Route::get('xoa/{id}','PageController@getXoa');
-  // sửa template
-Route::get('edittemp/{id}','PageController@getSua');
-Route::post('edittemp/{id}','PageController@postSua');
-  //thêm template
-// Route::get('addtemp','PageController@getThem');
-// Route::post('addtemp','PageController@postThem');
-});
+  Route::group(['prefix'=>'templates'],function(){
+
+        // xóa templates
+      Route::get('xoa/{id}','TemplateController@getXoa');
+
+        // sửa template
+      Route::get('sua/{id}','TemplateController@getSua');
+      Route::post('sua/{id}','TemplateController@postSua');
+
+        //thêm template
+      Route::get('them','TemplateController@getThem');
+      Route::post('them','TemplateController@postThem');
+  });
+
+  Route::group(['prefix'=>'services'],function(){
+
+        // xóa template
+      Route::get('xoa/{id}','ServiceController@destroy');
+      //   // sửa template
+      // Route::get('edittemp/{id}','ServiceController@getSua');
+      // Route::post('edittemp/{id}','ServiceController@postSua');
+      //   //thêm template
+      // Route::get('addtemp','ServiceController@getThem');
+      // Route::post('addtemp','ServiceController@postThem');
+  });

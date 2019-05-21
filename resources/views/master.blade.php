@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <base href="{{asset('source/..')}}">
 
   <title>Fibo - Mobile Marketing</title>
 
@@ -102,7 +103,7 @@
         Services
       </div>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="services">
           <i class="fas fa-fw fa-folder"></i>
           <span>Managerment</span>
         </a>
