@@ -14,6 +14,7 @@
 
 
 Route::get('index',['as'=>'trang-chu','uses'=>'PageController@getIndex']);
+
 Route::get('templates',['as'=>'template','uses'=>'PageController@getTemplates']);
 Route::get('compose',['as'=>'compose','uses'=>'PageController@getCompose']);
 
@@ -22,3 +23,33 @@ Route::post('login','UserController@postLoginAdmin');
 
 Route::get('register','UserController@getRegisterAdmin');
 Route::post('register','UserController@postRegisterAdmin');
+
+Route::get('templates',['as'=>'templates','uses'=>'PageController@getTemplates']);
+Route::get('services',['as'=>'service','uses'=>'ServiceController@getList']);
+
+
+  Route::group(['prefix'=>'templates'],function(){
+
+        // xóa templates
+      Route::get('xoa/{id}','TemplateController@getXoa');
+
+        // sửa template
+      Route::get('sua/{id}','TemplateController@getSua');
+      Route::post('sua/{id}','TemplateController@postSua');
+
+        //thêm template
+      Route::get('them','TemplateController@getThem');
+      Route::post('them','TemplateController@postThem');
+  });
+
+  Route::group(['prefix'=>'services'],function(){
+
+        // xóa template
+      Route::get('xoa/{id}','ServiceController@destroy');
+      //   // sửa template
+      // Route::get('edittemp/{id}','ServiceController@getSua');
+      // Route::post('edittemp/{id}','ServiceController@postSua');
+      //   //thêm template
+      // Route::get('addtemp','ServiceController@getThem');
+      // Route::post('addtemp','ServiceController@postThem');
+  });
