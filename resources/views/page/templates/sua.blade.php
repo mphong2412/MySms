@@ -4,12 +4,12 @@
 <form action="" method="POST" >
   <div class="container">
       <h2>Edit Template</h2>
-      <form action="edittemp/{{$templates->id}}" method="POST">
+      <form action="" method="POST">
           <label for="fname">Service: </label>
-          <input type="text" id="Service" name="Service" value="{{$edittemp->Service}}" required><br>
+          <input type="text" id="Service" name="Service" value="" required><br>
 
           <label for="lname">Template: </label>
-          <input type="textarea" id="Template" name="Template" value="{{$edittemp->Template}}" required><br>
+          <input type="textarea" id="Template" name="Template" value="" required><br>
 
           <button class="btn btn-success" type="button" style="margin: 5px">
             <i class="fas fa-plus fa-sm"> Add User</i>
