@@ -3,7 +3,7 @@
 
 <div class="container-fluid">
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">Template Managerment</h1>
+  <h1 class="h3 mb-2 text-gray-800">Group Contacts Managerment</h1>
 
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
@@ -39,22 +39,22 @@
           <thead>
             <tr>
               <th>Seq</th>
-              <th>Services</th>
-              <th>Template</th>
+              <th>Name</th>
+              <th>Description</th>
               <th>Actions</th>
             </tr>
           </thead>
-          @foreach($template as $t)
+          @foreach($groups as $t)
           <tbody>
             <tr>
               <td>{{$t->id}}</td>
-              <td>{{$t->service}}</td>
-              <td>{{$t->template}}</td>
+              <td>{{$t->name_group}}</td>
+              <td>{{$t->description}}</td>
               <td>
-                <button class="btn  btn-circle btn-sm" onclick="window.location.href='templates/sua/{id}'">
+                <button class="btn  btn-circle btn-sm" onclick="window.location.href=''">
                   <i class="fas fa-edit"></i>
                 </button>
-                <a href="templates/sua/{id}" class="btn btn-danger btn-circle btn-sm">
+                <a href="" class="btn btn-danger btn-circle btn-sm">
                   <i class="fas fa-trash"></i>
                 </a>
             </td>
@@ -62,7 +62,7 @@
           </tbody>
           @endforeach
         </table>
-        <p class="pull-left">Total {{count($template)}} templates.</p>
+        <p class="pull-left">Total {{count($groups)}}.</p>
       </div>
     </div>
   </div>

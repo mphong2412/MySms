@@ -14,7 +14,7 @@ class PageController extends Controller
     }
     public function getTemplates(){
       $template = templates::all();
-      return view('page.templates',compact('template'));
+      return view('page.template',compact('template'));
     }
 
     public function getCompose(){

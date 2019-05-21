@@ -14,7 +14,7 @@
 <form action="templates/them" method="POST" >
 
   <div class="container">
-      <h2>Edit Template</h2>
+      <h2>Add New Group</h2>
       <!-- <form action="" method="POST"> -->
         <input type="hidden" name="_token" value="{{csrf_token()}}"/>
           <label for="fname">Service: </label>

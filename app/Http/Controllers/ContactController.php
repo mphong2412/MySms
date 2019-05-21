@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\contact_groups;
+use App\contacts;
 
-class GroupController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function getGroup()
+    public function index()
     {
-        $groups = contact_groups::all();
-        return view('page.group',compact('groups'));
+        $contact = contacts::all();
+        return view('page.contact',compact('contact'));
     }
 
     /**
