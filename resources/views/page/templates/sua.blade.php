@@ -16,19 +16,16 @@
 
   <div class="container">
       <h2>Edit Template</h2>
-      <!-- <form action="" method="POST"> -->
         <input type="hidden" name="_token" value="{{csrf_token()}}"/>
-          <label for="fname">Service: </label>
-          <input type="text" id="Service" name="txtService" value="{{$templates->service}}"><br>
+        <div class="col-sm-12">Service:
+        <input type="text" id="Service" name="txtService" value="{{$templates->service}}"></div><br>
 
-          <label for="lname">Template: </label>
-          <input type="textarea" id="Template" name="txtTemplate" value="{{$templates->template}}"><br>
+        <label for="lname">Template: </label>
+        <input type="textarea" id="Template" name="txtTemplate" value="{{$templates->template}}"><br>
 
-          <button class="btn btn-success" type="button" style="margin: 5px">
-            <i class="fas fa-plus fa-sm"> Add User</i>
-          </button> <br>
-
-
+        <button class="btn btn-success" type="button" style="margin: 5px">
+          <i class="fas fa-plus fa-sm"> Add User</i>
+        </button> <br>
   </div>
 
 <table class="table table-bordered" id="dataTable" width="100%" >

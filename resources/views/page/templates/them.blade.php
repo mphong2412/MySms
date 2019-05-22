@@ -17,8 +17,9 @@
       <h2>Add New Template</h2>
       <!-- <form action="" method="POST"> -->
         <input type="hidden" name="_token" value="{{csrf_token()}}"/>
-          <label for="fname">Service: </label>
-          <input type="text" id="Service" name="txtService" ><br>
+          <!-- <label for="fname">Service: </label> -->
+          <div class="col-sm-12">Service:
+          <input type="text" id="Service" name="txtService" ></div><br>
 
           <label for="lname">Template: </label>
           <input type="textarea" id="Template" name="txtTemplate" ><br>
@@ -42,7 +43,7 @@
   </thead>
 </table><br>
 
-<button class="btn btn-success" type="button" style="margin: 10px" onclick="window.location.href='templates'">
+<button class="btn btn-success" type="reset" style="margin: 10px" onclick="window.location.href='templates'">
   <i class="fas fa-times fa-sm"> Cancel</i>
 </button>
   <button type="submit" class="btn btn-success fas fa-save fa-sm"  style="margin: 10px"> Save</button>
